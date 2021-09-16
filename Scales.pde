@@ -5,7 +5,7 @@ void setup() {
 }
 
 void draw() {
-  for ( int y = -100; y < 500; y = y + 100){
+  for ( int y = -100; y < 500; y = y + 50){
     for ( int x = -50; x < 500; x = x + 50){
       scale(x,y);
     }
@@ -14,7 +14,13 @@ void draw() {
 
 void scale(int x, int y) {
   noStroke();
-  fill(#3687E8);
+  double temp = Math.random();
+  if (temp < .5){
+    fill(#3687E8);
+  }
+  else{
+    fill(#5E86E8);
+  }
   ellipse(50+x,100+y,50,100);
   fill(#0EBAC1);
   rect(37+x,70+y,25,60);
